@@ -41,62 +41,59 @@ ry slightly with changes to the train-test split,
 
 
 ## Program
-import matplotlib.pyplot as plt
-
-from sklearn.datasets import load_digits
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
-from sklearn.neural_network import MLPClassifier
-from sklearn.metrics import accuracy_score, classification_report
-
-# Load Digits dataset
-digits = load_digits()
-
-# Input features and target labels
-X = digits.data
-y = digits.target
-
-# Split dataset
-X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.2, random_state=42, stratify=y
-)
-
-# Standardize features
-scaler = StandardScaler()
-X_train = scaler.fit_transform(X_train)
-X_test = scaler.transform(X_test)
-
-# Create MLP model
-mlp = MLPClassifier(
-    hidden_layer_sizes=(100,),
-    activation='relu',
-    solver='adam',
-    max_iter=500,
-    random_state=42
-)
-
-# Train model
-mlp.fit(X_train, y_train)
-
-# Predict test data
-y_pred = mlp.predict(X_test)
-
-# Evaluate model
-print("Test Accuracy:", accuracy_score(y_test, y_pred))
-
-print("\nClassification Report:")
-print(classification_report(y_test, y_pred))
-
-# Plot training loss
-plt.plot(mlp.loss_curve_)
-plt.title("MLP Training Loss Curve")
-plt.xlabel("Iterations")
-plt.ylabel("Loss")
-plt.grid()
-plt.show()
-
-
-
+    import matplotlib.pyplot as plt
+    
+    from sklearn.datasets import load_digits
+    from sklearn.model_selection import train_test_split
+    from sklearn.preprocessing import StandardScaler
+    from sklearn.neural_network import MLPClassifier
+    from sklearn.metrics import accuracy_score, classification_report
+    
+    # Load Digits dataset
+    digits = load_digits()
+    
+    # Input features and target labels
+    X = digits.data
+    y = digits.target
+    
+    # Split dataset
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=0.2, random_state=42, stratify=y
+    )
+    
+    # Standardize features
+    scaler = StandardScaler()
+    X_train = scaler.fit_transform(X_train)
+    X_test = scaler.transform(X_test)
+    
+    # Create MLP model
+    mlp = MLPClassifier(
+        hidden_layer_sizes=(100,),
+        activation='relu',
+        solver='adam',
+        max_iter=500,
+        random_state=42
+    )
+    
+    # Train model
+    mlp.fit(X_train, y_train)
+    
+    # Predict test data
+    y_pred = mlp.predict(X_test)
+    
+    # Evaluate model
+    print("Test Accuracy:", accuracy_score(y_test, y_pred))
+    
+    print("\nClassification Report:")
+    print(classification_report(y_test, y_pred))
+    
+    # Plot training loss
+    plt.plot(mlp.loss_curve_)
+    plt.title("MLP Training Loss Curve")
+    plt.xlabel("Iterations")
+    plt.ylabel("Loss")
+    plt.grid()
+    plt.show()
 
 ## output
 
