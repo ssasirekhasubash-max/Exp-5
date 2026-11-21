@@ -97,25 +97,25 @@ ry slightly with changes to the train-test split,
 
 ## output
 
- Test Accuracy: 0.975
-
-Classification Report:
-              precision    recall  f1-score   support
-
-           0       1.00      1.00      1.00        36
-           1       0.92      0.92      0.92        36
-           2       1.00      1.00      1.00        35
-           3       1.00      1.00      1.00        37
-           4       0.97      0.97      0.97        36
-           5       0.97      1.00      0.99        37
-           6       1.00      1.00      1.00        36
-           7       1.00      1.00      1.00        36
-           8       0.94      0.89      0.91        35
-           9       0.95      0.97      0.96        36
-
-    accuracy                           0.97       360
-   macro avg       0.97      0.97      0.97       360
-weighted avg       0.97      0.97      0.97       360
+     Test Accuracy: 0.975
+    
+    Classification Report:
+                  precision    recall  f1-score   support
+    
+               0       1.00      1.00      1.00        36
+               1       0.92      0.92      0.92        36
+               2       1.00      1.00      1.00        35
+               3       1.00      1.00      1.00        37
+               4       0.97      0.97      0.97        36
+               5       0.97      1.00      0.99        37
+               6       1.00      1.00      1.00        36
+               7       1.00      1.00      1.00        36
+               8       0.94      0.89      0.91        35
+               9       0.95      0.97      0.96        36
+    
+        accuracy                           0.97       360
+       macro avg       0.97      0.97      0.97       360
+    weighted avg       0.97      0.97      0.97       360
 
 
 
